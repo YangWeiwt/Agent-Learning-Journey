@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: agent-learning-journey
+  ai:
+    model:
+      chat: none
+      embedding: none
+
+app:
+  ai:
+    deepseek:
+      api-key: ${DEEPSEEK_API_KEY:}
+      base-url: ${DEEPSEEK_BASE_URL:https://api.deepseek.com}
+      completions-path: /chat/completions
+      model: ${DEEPSEEK_MODEL:deepseek-v4-flash}
+    minimax:
+      api-key: ${MINIMAX_API_KEY:}
+      base-url: ${MINIMAX_BASE_URL:https://api.minimax.io}
+      completions-path: /v1/chat/completions
+      model: ${MINIMAX_MODEL:MiniMax-M2.7}
+
+server:
+  port: 8080
